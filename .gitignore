@@ -8,3 +8,10 @@ wheels/
 
 # Virtual environments
 .venv
+
+
+data.tsv
+data/
+knesset_phonemes_v1.txt.7z
+knesset_phonemes_v1.txt
+output/

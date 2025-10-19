@@ -1,10 +1,12 @@
 [project]
 name = "bert-phonemizer"
 version = "0.1.0"
-description = "Add your description here"
+description = "Encoder-decoder model for Hebrew text-to-phoneme conversion using frozen BERT and causal decoder"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "torch>=2.9.0",
     "transformers>=4.57.1",
+    "tqdm>=4.66.0",
+    "pandas>=2.3.3",
 ]

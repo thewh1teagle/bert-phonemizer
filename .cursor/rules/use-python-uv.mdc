@@ -1,0 +1,8 @@
+---
+alwaysApply: true
+---
+
+Whenever you need to run a Python script or install a package, use `uv run` or `uv add` or `uv pip` to execute it.
+For example, to run the `src/train.py` script, you can use:
+
+For inline execution, use `uv run python ...`
