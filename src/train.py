@@ -5,6 +5,9 @@ uv run src/train.py \
   --batch_size 32 \
   --num_epochs 10
 """
+import os
+os.environ['TOKENIZERS_PARALLELISM'] = 'false'
+
 import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
