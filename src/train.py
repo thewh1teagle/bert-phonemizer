@@ -120,8 +120,15 @@ def train(
     # Count trainable parameters
     trainable_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
     frozen_params = sum(p.numel() for p in model.parameters() if not p.requires_grad)
-    print(f"Trainable parameters: {trainable_params:,}")
-    print(f"Frozen parameters: {frozen_params:,}")
+    total_params = trainable_params + frozen_params
+    
+    print(f"\n{'='*50}")
+    print(f"MODEL SIZE")
+    print(f"{'='*50}")
+    print(f"Total parameters:     {total_params:,} ({total_params / 1e6:.2f}M)")
+    print(f"Trainable parameters: {trainable_params:,} ({trainable_params / 1e6:.2f}M)")
+    print(f"Frozen parameters:    {frozen_params:,} ({frozen_params / 1e6:.2f}M)")
+    print(f"{'='*50}\n")
     
     # Optimizer and scheduler
     optimizer = torch.optim.AdamW(
